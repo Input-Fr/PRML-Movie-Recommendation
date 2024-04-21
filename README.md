@@ -1,7 +1,6 @@
 # Movie Recommendation System
 
-With the proliferation of streaming plat-
-forms and increased availability of content, users are faced with a vast array of films, which can make
+With the proliferation of streaming platforms and increased availability of content, users are faced with a vast array of films, which can make
 decision-making challenging. In this context, a film recommendation system based on user preferences
 offers an effective solution to help users discover new films that match their personal tastes. This project
 aims to develop such a system, utilizing advanced machine learning techniques to analyze user viewing
