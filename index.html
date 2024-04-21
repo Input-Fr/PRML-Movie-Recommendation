@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/pyodide/v0.18.1/full/pyodide.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
 
 </head>
@@ -28,7 +28,7 @@
                 <a class="nav-link" href="#HIW">How It Works</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#team">Team</a>
+                <a class="nav-link" href="#teamsection">Team</a>
             </li>
         </ul>
     </div>
@@ -43,25 +43,26 @@
     <div class="row">
         <div , class="col-md-6" id="home">
             <h2>About the Project</h2>
-            <p>This project centers on the development of four distinct machine learning models, each engineered to
-                recommend the optimal movie for a user based solely on historical user ratings. The first model applies
-                collaborative filtering techniques, building predictions from the similarities found in user rating
-                patterns. The second model adopts a content-based filtering approach, analyzing the characteristics of
-                films that have been highly rated to suggest similar movies. The third model is a hybrid system that
-                merges collaborative and content-based strategies, aiming to leverage the strengths of both to enhance
-                recommendation accuracy. The fourth model utilizes advanced deep learning algorithms, analyzing complex
-                patterns in user ratings to predict preferences with high precision. Each model is rigorously tested to
-                ascertain its efficacy in providing the most accurate and personalized movie recommendations, based on
-                the extensive dataset of user ratings</p>
+            <p>This project focuses on the development of four distinct machine learning models,
+                each designed to recommend the optimal movie to a user based solely on historical user ratings.
+                The K-NN (k-nearest neighbors) model applies collaborative filtering techniques,
+                building predictions from the similarities found in user rating patterns.
+                The Content-Based model analyzes the characteristics of films that have received high ratings to
+                suggest similar movies. The Hybrid System combines collaborative and content-based filtering strategies,
+                aiming to leverage the strengths of both to enhance the accuracy of recommendations. Finally,
+                the Deep Neural Network model utilizes advanced deep learning algorithms to analyze complex patterns
+                in user ratings to predict preferences with high precision.
+                Each model is rigorously tested to ascertain its efficacy in providing the most accurate and
+                personalized movie recommendations, based on an extensive dataset of user ratings.</p>
         </div>
         <div class="col-md-6">
             <div class="video-container">
-        <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen frameborder="0"
-                height="365" referrerpolicy="strict-origin-when-cross-origin"
-                src="https://www.youtube.com/embed/B3iFg4V9gsQ"
-                title="ESSAYER DE NE PAS CRIER PENDANT 24H (Feat. Mastu)"></iframe>
-    </div>
+                <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen frameborder="0"
+                        height="365" referrerpolicy="strict-origin-when-cross-origin"
+                        src="https://www.youtube.com/embed/B3iFg4V9gsQ"
+                        title="ESSAYER DE NE PAS CRIER PENDANT 24H (Feat. Mastu)"></iframe>
+            </div>
         </div>
     </div>
 
@@ -69,6 +70,7 @@
 
     <h2 id="HIW">How It Works</h2>
     <p>
+    <p>See below for an explanation of the demo code.</p>
     <pre>
     <code>
 ###################### PRE-PROCESSING ######################
@@ -114,12 +116,15 @@ class User:
     <p>
         A class User designed to represent a user's basic information in a movie rating system.
         The class includes an __init__ constructor method that initializes a new instance of User.
-        The constructor takes two optional parameters: user_id, which defaults to None if not provided, and user_ratings,
-        which defaults to an empty list if not provided. The user_id is intended to store a unique identifier for the user,
+        The constructor takes two optional parameters: user_id, which defaults to None if not provided, and
+        user_ratings,
+        which defaults to an empty list if not provided. The user_id is intended to store a unique identifier for the
+        user,
         and user_ratings is intended to hold a list of tuples,
         where each tuple contains a movieId and the corresponding rating given by the user.
         This class structure allows for the encapsulation of user data,
-        facilitating easy management and access to user-specific ratings within a larger application or system handling movie ratings.
+        facilitating easy management and access to user-specific ratings within a larger application or system handling
+        movie ratings.
     </p>
     <pre>
         <code>
@@ -401,8 +406,33 @@ elif choice == "2":
         based on user input, demonstrating a flexible approach to personalizing content recommendations.</p>
     <hr>
 
-    <h2 id="team">Meet the Team</h2>
-    <p>Ca c la team</p>
+    <h2 id="teamsection">Meet the Team</h2>
+    <div class="container">
+        <div class="row" id="team">
+            <div class="col-md-4">
+                <img alt="Member 1" class="img-fluid" src="pierre.jpg">
+                <h3>Pierre</h3>
+                <p>SVM and Video</p>
+            </div>
+            <div class="col-md-4">
+                <img alt="Member 2" class="img-fluid" src="antoine.jpg">
+                <h3>Antoine</h3>
+                <p>K-NN, PCA and website</p>
+            </div>
+        </div>
+        <div class="row" id="team">
+            <div class="col-md-4">
+                <img alt="Member 3" class="img-fluid" src="ivan.jpg">
+                <h3>Ivan</h3>
+                <p>Linear regression, data preprocessing and documentation</p>
+            </div>
+            <div>
+                <img alt="Member 4" class="img-fluid" src="maxime.jpg">
+                <h3>Maxime</h3>
+                <p>Perceptron and video</p>
+            </div>
+        </div>
+    </div>
     <hr>
 </div>
 
