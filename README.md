@@ -13,11 +13,17 @@ In order to execute the code properly you will need to clone the repo with all i
 folder [dataset](dataset/) and its csv files that will help to our models to be train properly.
 
 1. Download the project by cloning the repository :
+   
   1. Open the project in any IDE (pycharm is recommended as is was built in it)
+     
   2. According to the file you want to execute depencies will vary main dependencies are numpy, pandas and
      scikit-learn, you can download these third-party librairies by typing in terminal `pip install <library name>`
+
+     
 2. Once installation is done you are good to go and you can simply execute the code to see what movie is recommended :
+   
    1. It is recommended to first execute the mainDemo.py as it is the easiest to use
+
    2. To set user's parameter (that is to say what movies the user rated and which note has been given) you can change the
       `test_user` variable in the 'Using the models' section.  
 
