@@ -12,7 +12,7 @@ well as those in the same style, this system aims to enhance the cinematic disco
 In order to execute the code properly you will need to clone the repo with all its depencies especially the 
 folder [dataset](dataset/) and its csv files that will help to our models to be train properly.
 
-1. Download the project by cloning the repository :
+1. Download the project by cloning the repository 
    
   1. Open the project in any IDE (pycharm is recommended as is was built in it)
      
