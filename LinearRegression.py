@@ -20,7 +20,6 @@ merged['rating'] = scaler.fit_transform(merged[['rating']])
 merged = merged.drop(columns=['title'])
 # we also drop the timestamp column as we won't use it neither
 merged = merged.drop(columns=['timestamp'])
-
 # make a column for each genre
 genres_dummies = merged['genres'].str.get_dummies(sep='|')
 
