@@ -363,10 +363,31 @@ test_user = User(0,test_ratings)
 # First preprocess the datas
 recoList = recommend(test_user)
 
+firstC = input("How do you want to set user's preferences ?\n\033[94m1\033[0m Rating random movies\n\033[94m2\033[0m Custom choosen movies (in code)\n")
+while firstC != '1' and firstC != '2' and firstC != '3':
+    print("Invalid choice")
+    firstC = input("Which model do you want to use ?\n\033[94m1\033[0m Support Vector Machine (Recommended)\n\033[94m2\033[0m Perceptron\n")
+
+
+if firstC == "1":
+    test_ratings = []
+    test_user = User(0, test_ratings)
+    for i in range(10):
+        # select randomly a movie among movie list
+        row = movieNgenre.sample(n=1)
+        rateGiven = input(f"Give a rate out of 50 of the following movie \"{np.array(row['title'])[0]}\"\n")
+        rate = float(rateGiven)/10
+        movieId = np.array(row['movieId'])[0]
+        # add movie in list
+        test_user.ratings.append((movieId, rate))
+
+
+    recoList = recommend(test_user)
+
 # Then use a model
 choice = input("Which model do you want to use ?\n\033[94m1\033[0m Support Vector Machine (Recommended)\n\033[94m2\033[0m Perceptron\n")
 
-while choice != '1' and choice != '2':
+while choice != '1' and choice != '2' and choice != '3':
     print("Invalid choice")
     choice = input("Which model do you want to use ?\n\033[94m1\033[0m Support Vector Machine (Recommended)\n\033[94m2\033[0m Perceptron\n")
 
@@ -374,7 +395,6 @@ movieIdRecommended = []
 if choice == "1":
     print("SVM choosen")
     movieIdRecommended = SVM(test_user, recoList)
-    print(movieIdRecommended)
 elif choice == "2":
     print("Perceptron choosen")
     movieIdRecommended = perceptron(recoList)
