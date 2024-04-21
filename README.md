@@ -22,7 +22,7 @@ folder [dataset](dataset/) and its csv files that will help to our models to be 
      
 2. Once installation is done you are good to go and you can simply execute the code to see what movie is recommended :
    
-   1. It is recommended to first execute the mainDemo.py as it is the easiest to use
+   1. It is recommended to first execute the mainDemo.py as it is the easiest to use and it is the most accurate one.
 
    2. To set user's parameter (that is to say what movies the user rated and which note has been given) you can change the
       `test_user` variable in the 'Using the models' section.  
