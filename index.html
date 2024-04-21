@@ -2,89 +2,420 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="images.png" rel="icon" type="image/png">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>AI Movie Recommender</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-        }
-        .navbar-brand, .nav-link, .footer {
-            color: #fff !important;
-        }
-        .footer {
-            padding: 10px 0;
-            background-color: #333;
-            color: white;
-            text-align: center;
-        }
-        .jumbotron {
-            padding: 2rem 1rem;
-            background-color: #f8f9fa;
-            border-radius: 0.3rem;
-            text-align: center;
-        }
-        .container {
-            padding-top: 20px;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/pyodide/v0.18.1/full/pyodide.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Movie AI</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#HIW">How It Works</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#team">Team</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Movie AI</a>
+    <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+            data-target="#navbarNav" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#HIW">How It Works</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#team">Team</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
-    <div class="jumbotron">
-        <h1 class="display-4">AI Movie Recommender</h1>
-        <p class="lead">Ptit texte sympa ici</p>
+<div class="jumbotron">
+    <h1 class="display-4">AI Movie Recommender</h1>
+    <p class="lead">Discover Your Next Favorite Film with AI</p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div , class="col-md-6" id="home">
+            <h2>About the Project</h2>
+            <p>This project centers on the development of four distinct machine learning models, each engineered to
+                recommend the optimal movie for a user based solely on historical user ratings. The first model applies
+                collaborative filtering techniques, building predictions from the similarities found in user rating
+                patterns. The second model adopts a content-based filtering approach, analyzing the characteristics of
+                films that have been highly rated to suggest similar movies. The third model is a hybrid system that
+                merges collaborative and content-based strategies, aiming to leverage the strengths of both to enhance
+                recommendation accuracy. The fourth model utilizes advanced deep learning algorithms, analyzing complex
+                patterns in user ratings to predict preferences with high precision. Each model is rigorously tested to
+                ascertain its efficacy in providing the most accurate and personalized movie recommendations, based on
+                the extensive dataset of user ratings</p>
+        </div>
+        <div class="col-md-6">
+            <div class="video-container">
+        <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen frameborder="0"
+                height="365" referrerpolicy="strict-origin-when-cross-origin"
+                src="https://www.youtube.com/embed/B3iFg4V9gsQ"
+                title="ESSAYER DE NE PAS CRIER PENDANT 24H (Feat. Mastu)"></iframe>
+    </div>
+        </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6", id="home">
-                <h2>About the Project</h2>
-                <p>This project centers on the development of four distinct machine learning models, each engineered to recommend the optimal movie for a user based solely on historical user ratings. The first model applies collaborative filtering techniques, building predictions from the similarities found in user rating patterns. The second model adopts a content-based filtering approach, analyzing the characteristics of films that have been highly rated to suggest similar movies. The third model is a hybrid system that merges collaborative and content-based strategies, aiming to leverage the strengths of both to enhance recommendation accuracy. The fourth model utilizes advanced deep learning algorithms, analyzing complex patterns in user ratings to predict preferences with high precision. Each model is rigorously tested to ascertain its efficacy in providing the most accurate and personalized movie recommendations, based on the extensive dataset of user ratings</p>
-            </div>
-            <div class="col-md-6">
-                <iframe width="649" height="365" src="https://www.youtube.com/embed/B3iFg4V9gsQ" title="ESSAYER DE NE PAS CRIER PENDANT 24H (Feat. Mastu)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </div>
+    <hr>
 
-        <hr>
+    <h2 id="HIW">How It Works</h2>
+    <p>
+    <pre>
+    <code>
+###################### PRE-PROCESSING ######################
 
-        <h2 id="HIW">How It Works</h2>
-        <p>Foutre le truc de comment ça fonctionne</p>
-        <hr>
+movieNgenre = pd.read_csv('dataset/movies.csv')
+ratings = pd.read_csv('dataset/ratings.csv')
 
-        <h2 id="team">Meet the Team</h2>
-        <p>Ca c la team</p>
-        <hr>
-    </div>
+merged = pd.merge(ratings, movieNgenre, on='movieId')
+merged = merged.sort_values(by='userId')
+# Reset the indexes
+merged = merged.reset_index(drop=True)
 
-    <footer class="footer">
-        Avec joie et bonne humeur
-    </footer>
+# we normalize the rate so that the linear regression will perform better
+scaler = MinMaxScaler()
+merged['rating'] = scaler.fit_transform(merged[['rating']])
+    </code>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+</pre>
+    <script>hljs.highlightAll();</script>
+    <p>
+        Firstly we have to reads movie and ratings data from CSV files, merges them on a common 'movieId' key,
+        sorts the merged data by 'userId', resets the DataFrame index for sequential access,
+        and normalizes the ratings using MinMaxScaler to a range between 0 and 1.
+        This preprocessing ensures the data is well-organized and scaled appropriately,
+        making it suitable for further analysis or input into machine learning algorithms,
+        particularly those sensitive to the scale of input data like linear regression.
+    </p>
+    <pre>
+        <code>
+class User:
+    '''
+        id= userId
+        ratings= list of tuplet: (movieId,rating)
+    '''
+
+    def __init__(self, user_id=None, user_ratings=None):
+        if user_ratings is None:
+            user_ratings = []
+        self.id = user_id
+        self.ratings = user_ratings
+        </code>
+    </pre>
+    <p>
+        A class User designed to represent a user's basic information in a movie rating system.
+        The class includes an __init__ constructor method that initializes a new instance of User.
+        The constructor takes two optional parameters: user_id, which defaults to None if not provided, and user_ratings,
+        which defaults to an empty list if not provided. The user_id is intended to store a unique identifier for the user,
+        and user_ratings is intended to hold a list of tuples,
+        where each tuple contains a movieId and the corresponding rating given by the user.
+        This class structure allows for the encapsulation of user data,
+        facilitating easy management and access to user-specific ratings within a larger application or system handling movie ratings.
+    </p>
+    <pre>
+        <code>
+def recommend(user):
+    """
+    parameter : user instance of User class containing every of its preferences
+
+    return : the list of ids of the movies that should be interesting for the user
+    """
+    degrees = []
+    for otherUser in userList:
+        if otherUser.id != user.id:
+            degrees.append(similarityDegree(user, otherUser))
+        else:
+            degrees.append(-1)  # don't recommand urself
+
+    sibIdx = np.argmax(np.array(degrees))
+    sib = userList[sibIdx]  # get the one that has most similarity with
+
+    recommendation = []
+    # look for a film that the other one did not have seen yet
+    r1 = sib.ratings
+    r2 = user.ratings
+    for movie, _ in r1:
+        for movieU, _ in r2:
+            if movie != movieU and not userAlreadySee(user, movie):
+                recommendation.append(movie)
+                break
+
+    return recommendation[1:]
+        </code>
+    </pre>
+    <p>The recommend function in the provided code aims to generate movie recommendations for a given user
+        by evaluating similarity with other users in a predefined list.
+        It calculates a 'similarity degree' for each user in the list,
+        except for the user itself (marked by a similarity score of -1 to exclude self-comparison).
+        The function determines the most similar user (the "sibling" user)
+        and then suggests movies that this sibling user has rated but the original user has not seen yet.
+        The recommendations are based on shared interests and ratings patterns,
+        excluding any movies the original user has already viewed, thus providing personalized movie suggestions.</p>
+    <pre>
+        <code>
+def perceptron(recommendations):
+    # Collect data
+    movies = pd.read_csv('dataset/movies.csv')
+    ratings = pd.read_csv('dataset/ratings.csv')
+
+
+    # Simplify data
+    merged = pd.merge(ratings, movies, on='movieId')
+
+    merged = merged.drop(columns=['title'])
+    merged = merged.drop(columns=['timestamp'])
+
+
+    # Catch all existing movie genres
+    genres = []
+    for genres1 in merged["genres"]:
+        for genre in genres1.split('|'):
+            if not genre in genres and genre != '(no genres listed)':
+                genres.append(genre)
+
+
+
+    # Convert data type
+    merged["rating"] = merged["rating"].astype(float)
+    merged["userId"] = merged["userId"].astype(int)
+    merged["movieId"] = merged["movieId"].astype(int)
+
+    merged = merged.sort_values(by='movieId')
+
+
+    # Collect movies genre for all movieId
+    movie_genres = dict()
+    for i in range(len(merged)):
+        cur = merged.iloc[i]
+        types = cur["genres"].split('|')
+        movieId = cur['movieId']
+
+        typesId = []
+        for t in types:
+            if t in genres:
+                typesId.append(genres.index(t))
+        movie_genres[movieId] = typesId
+
+
+
+    # Collect users and their ratings
+    users = dict()
+    for i in range(len(merged)):
+        cur = merged.iloc[i]
+        user = cur["userId"]
+        rating = cur["movieId"], cur["rating"]
+
+        if not user in users.keys():
+            users[user] = []
+        users[user].append(rating)
+
+    class UserPerceptron:
+        '''
+            id= userId
+            ratings= list of tuplet: (movieId,rating)
+        '''
+
+        def __init__(self, user_id=None, user_ratings=None):
+            if user_ratings is None:
+                user_ratings = []
+            self.id = user_id
+            self.ratings = user_ratings
+            self.stats = self.genres_stats()
+
+        def genres_stats(self):
+            stats = []
+            learning_rate = 0.1
+            while learning_rate > 0:
+                MovieId, rating = self.ratings[random.randint(0, len(self.ratings) - 1)]
+                cur_genres = movie_genres[MovieId]
+                for g in cur_genres:
+                    while len(stats) < g + 1:
+                        stats.append(0)
+                    stats[g] += (rating - 3.5) / len(cur_genres) * learning_rate
+                learning_rate -= 0.0001
+
+            return stats
+
+        def evaluate(self, movieId):
+            res = 0
+            for movie_genre in movie_genres[movieId]:
+                if len(self.stats) > movie_genre: # from perceptron to percep rond
+                    res += self.stats[movie_genre] / len(movie_genres[movieId])
+            return res
+
+    test_perceptron = UserPerceptron(0,test_ratings)
+
+    scores = []
+
+    for movie in recommendations:
+        score = test_perceptron.evaluate(movie)
+        scores.append(score)
+
+
+    finalReco = []
+    for i in range(10):
+        idxMax = np.argmax(np.array(scores))
+        finalReco.append(recommendations[idxMax])
+        scores.pop(idxMax)
+        recommendations.pop(idxMax)
+
+    return finalReco
+        </code>
+    </pre>
+    <p>The perceptron function is designed to refine movie recommendations using a custom-built perceptron model
+        tailored for movie genre preferences.
+        The function first initializes user and movie data by merging ratings with movie genres,
+        simplifying the dataset by dropping unnecessary columns,
+        and categorizing movie genres into a list and dictionary for quick access.
+        It then constructs a UserPerceptron class,
+        which uses a perceptron learning approach to adjust genre preferences based on randomly selected movie ratings
+        from the user's history, with an emphasis on distinguishing preferred genres through a weighted adjustment.
+        This model evaluates each recommended movie by computing a score based on the user's genre preferences,
+        and the top scores are selected to finalize the recommendations.
+        This method attempts to predict the user's likely satisfaction with each recommended movie,
+        ensuring that the suggestions are closely aligned with the user's historical preferences.</p>
+    <pre>
+        <code>
+def SVM(user, recommendations):
+    '''user_df = pd.read_csv("merged.csv")  # userId  movieId  rating  genres
+    movies_df = pd.read_csv("movies.csv")  # movieId  title   genres'''
+
+    user_df = pd.DataFrame(columns=['userId', 'movieId', '(no genres listed)', 'Action', 'Adventure',
+       'Animation', 'Children', 'Comedy', 'Crime', 'Documentary', 'Drama',
+       'Fantasy', 'Film-Noir', 'Horror', 'IMAX', 'Musical', 'Mystery',
+       'Romance', 'Sci-Fi', 'Thriller', 'War', 'Western', 'Rating'])
+
+    genre_list = ['(no genres listed)', 'Action', 'Adventure',
+       'Animation', 'Children', 'Comedy', 'Crime', 'Documentary', 'Drama',
+       'Fantasy', 'Film-Noir', 'Horror', 'IMAX', 'Musical', 'Mystery',
+       'Romance', 'Sci-Fi', 'Thriller', 'War', 'Western']
+
+    for le_gros_zizi_de_ivan in user.ratings:
+        movie, score = le_gros_zizi_de_ivan # réel
+        data = movieNgenre[movieNgenre['movieId'] == movie]
+        genres = np.array(data['genres'])[0].split("|")
+        row = {'userId': user.id, 'movieId': movie}
+        n = int(score*10)
+
+        row['Rating'] = n
+
+        # print(row)
+        for genre in genre_list:
+            if genre in genres:
+                row[genre] = 1
+            else:
+                row[genre] = 0
+
+        user_df.loc[len(user_df)] = pd.Series(row)
+
+    # Training
+    X = user_df.drop(columns=["Rating"])
+    y = user_df["Rating"]
+
+    # Initialiser le modèle SVM
+    model = svm.SVC(kernel='linear')
+    # train
+
+
+
+    model.fit(X, np.array(y))
+
+    # Faire des prédictions sur l'ensemble de test
+
+    rec_df = pd.DataFrame(columns=['userId', 'movieId', '(no genres listed)', 'Action', 'Adventure',
+                                    'Animation', 'Children', 'Comedy', 'Crime', 'Documentary', 'Drama',
+                                    'Fantasy', 'Film-Noir', 'Horror', 'IMAX', 'Musical', 'Mystery',
+                                    'Romance', 'Sci-Fi', 'Thriller', 'War', 'Western'])
+
+
+    for le_gros_zizi_de_ivan in recommendations:
+        movie = le_gros_zizi_de_ivan
+        data = movieNgenre[movieNgenre['movieId'] == movie]
+        genres = np.array(data['genres'])[0].split("|")
+        row = {'userId': user.id, 'movieId': movie}
+
+        for genre in genre_list:
+            if genre in genres:
+                row[genre] = 1
+            else:
+                row[genre] = 0
+
+        rec_df.loc[len(rec_df)] = pd.Series(row)
+
+
+    predictions = model.predict(rec_df)
+
+
+    data = list(zip(recommendations, predictions))
+
+
+    # Sort the list of tuples based on the scores
+    sorted_data = sorted(data, key=lambda x: x[1])
+
+    sorted_names = [item[0] for item in sorted_data]
+
+    return sorted_names[len(sorted_names)-11:]
+        </code>
+    </pre>
+    <p>The SVM function is designed to enhance movie recommendations using a Support Vector Machine (SVM) model.
+        This function operates by first creating a feature matrix from user data,
+        where each row represents a user's rating of a movie and each column corresponds to movie genres,
+        with additional columns for user and movie IDs.
+        This data is then used to train an SVM model with a linear kernel to predict user ratings based
+        on the genre profile of the movies. During the prediction phase,
+        the function constructs a new DataFrame for the recommended movies,
+        incorporating the same genre-based feature set used in training.
+        The SVM model predicts the user's potential rating for each recommended movie based on its genre profile.
+        Finally, the function ranks these movies based on the predicted ratings, returning the top recommendations.
+        This approach aims to predict how much a user will like a movie based on its genres,
+        using the structured and robust capabilities of SVM for classification and regression tasks.</p>
+    <pre>
+        <code>
+recoList = recommend(test_user)
+movieIdRecommended = []
+if choice == "1":
+    print("SVM choosen")
+    movieIdRecommended = SVM(test_user, recoList)
+    print(movieIdRecommended)
+elif choice == "2":
+    print("Perceptron choosen")
+    movieIdRecommended = perceptron(recoList)
+        </code>
+    </pre>
+    <p>A user can choose between two machine learning models—SVM and Perceptron—to refine an
+        initial list of movie recommendations. The recommend() function first generates this list for a test user.
+        Depending on the user's choice, indicated by the variable choice, the code selects the appropriate model:
+        if "1" is chosen, it prints "SVM chosen", applies the SVM model to the recommendations,
+        and prints the resulting recommended movie IDs; if "2" is chosen, it prints "Perceptron chosen" and
+        applies the Perceptron model to the same initial recommendations. The final recommended movie IDs are then
+        stored in the movieIdRecommended list. This setup allows dynamic selection of prediction models
+        based on user input, demonstrating a flexible approach to personalizing content recommendations.</p>
+    <hr>
+
+    <h2 id="team">Meet the Team</h2>
+    <p>Ca c la team</p>
+    <hr>
+</div>
+
+<footer class="footer">
+    PRML project 2024
+</footer>
+
+<script crossorigin="anonymous"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
