@@ -46,7 +46,7 @@ body
     height: 100%;
 }
 
-#team img
+.team img
 {
     border-radius: 50%;  /* Rend les images circulaires */
     width: 150px;       /* Définit une largeur fixe pour toutes les images */
@@ -54,12 +54,12 @@ body
     margin-bottom: 20px; /* Espace entre l'image et le texte */
 }
 
-#team h3
+.team h3
 {
     color: #333; /* Couleur du titre */
 }
 
-#team p
+.team p
 {
     color: #666; /* Couleur de la description */
 }
