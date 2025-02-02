@@ -29,5 +29,5 @@ folder [dataset](dataset/) and its csv files that will help to our models to be 
 
 # Documentation 
 
-For more information about Movie Recommendation System itself, see the [Documentation](documentation/). In this documentation you will be able
+For more information about Movie Recommendation System itself, see the [Documentation](https://input-fr.github.io/PRML-Movie-Recommendation/#HIW). In this documentation you will be able
 to go through every technique tried and, for some of them, used in the final product.
