@@ -338,8 +338,8 @@ def SVM(user, recommendations):
                                     'Romance', 'Sci-Fi', 'Thriller', 'War', 'Western'])
 
 
-    for le_gros_zizi_de_ivan in recommendations:
-        movie = le_gros_zizi_de_ivan
+    for reco in recommendations:
+        movie = reco
         data = movieNgenre[movieNgenre['movieId'] == movie]
         genres = np.array(data['genres'])[0].split("|")
         row = {'userId': user.id, 'movieId': movie}
